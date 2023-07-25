@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.backButton {
+  width: 100vw;
+  height: 4rem;
+}
+
+/* カテゴリ表示アニメーションの定義 */
+.slideShow {
+  animation-name: slideShowAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slideShowAnimation {
+  from {
+    left: 100vw; /* 初期位置 */
+  }
+  to {
+    left: 0; /* 表示位置 */
+  }
+}
+/* カテゴリ非表示アニメーションの定義 */
+.slideHidden {
+  animation-name: slideHiddenAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slideHiddenAnimation {
+  from {
+    left: 0; /* 表示位置 */
+  }
+  to {
+    left: 100vw; /* 初期位置 */
+  }
+}
+
+.firstCategoryList {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0vw;
+  background-color: white;
+  z-index: 1;
+}
+
+.secondCategoryList {
+  width: 100%;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0vw;
+  background-color: white;
+  z-index: 2;
+}
+
+.categoryHeader {
+  height: 4rem;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-color: rgb(243, 244, 246);
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.categoryButton {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
