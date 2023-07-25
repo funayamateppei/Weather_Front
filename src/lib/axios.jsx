@@ -1,7 +1,7 @@
 import Axios from "axios";
 
-const axios = Axios.create({
-  baseURL: process.env.PUBLIC_BACKEND_URL,
+const defaultAxios = Axios.create({
+  baseURL: process.env.REACT_APP_BACKEND_URL,
   headers: {
     "X-Requested-With": "XMLHttpRequest",
     Accept: "application/json",
@@ -9,4 +9,4 @@ const axios = Axios.create({
   withCredentials: true,
 });
 
-export default axios;
+export default defaultAxios;
