@@ -11,8 +11,6 @@ import CategoryButton from "../components/CategoryButton";
 const Search = () => {
   const [isOpenFirstCategory, setIsOpenFirstCategory] = useState(false);
   const [isOpenSecondCategory, setIsOpenSecondCategory] = useState(false);
-  const [prefecture, setPrefecture] = useState("");
-  const [region, setRegion] = useState("");
 
   // const url = "https://www.jma.go.jp/bosai/forecast/data/forecast/400000.json";
   const url = "prefectures";
@@ -20,11 +18,9 @@ const Search = () => {
     return await defaultAxios.get(url).then((response) => response.data);
   };
   const { data, mutate } = useSWR(url, fetcher);
-  useEffect =
-    (() => {
-      mutate();
-    },
-    []);
+  useEffect(() => {
+    mutate();
+  }, []);
 
   const firstCategories = [
     "北海道",
@@ -49,10 +45,9 @@ const Search = () => {
   };
 
   const secondCategoryOpen = (e) => {
-    setPrefecture(e.target.value);
     setIsOpenSecondCategory(true);
     const filteredSecondCategories = data.filter(
-      (data) => data.group == e.target.value
+      (data) => data.group === e.target.value
     );
     setSecondCategories(filteredSecondCategories);
     console.log(secondCategories);
@@ -125,11 +120,11 @@ const Search = () => {
                       display: "flex",
                       justifyContent: "space-around",
                     }}
+                    key={index}
                   >
                     <CategoryButton
                       value={category.prefecture_code}
                       text={category.prefecture}
-                      key={index}
                       handleClick={resultOpen}
                     />
                   </Link>

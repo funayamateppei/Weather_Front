@@ -1,9 +1,64 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import styles from "../styles/result.module.css";
+import defaultAxios from "../lib/axios";
+import { useSearchParams } from "react-router-dom";
+import useSWR from "swr";
+import { Link } from "react-router-dom";
+
+import SVGButton from "../components/SVGButton";
 
 const Result = () => {
-  return (
-    <div>Result</div>
-  )
-}
+  const [searchParams] = useSearchParams();
+  const prefecture_code = searchParams.get("prefecture_code");
 
-export default Result
+  const url = `regions?prefecture_code=${prefecture_code}`;
+  const fetcher = async (url) => {
+    return await defaultAxios.get(url).then((response) => response.data);
+  };
+  const { data, mutate } = useSWR(url, fetcher);
+  useEffect(() => {
+    mutate();
+  }, []);
+  // console.log(data);
+
+  return (
+    <div className={styles.container}>
+      <Link to={`/`}>
+        <div className={styles.backButton}>
+          <SVGButton
+            width={"3rem"}
+            d={"M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"}
+          />
+        </div>
+      </Link>
+
+      <div className={styles.weatherContainer}>
+        <h2>{data ? data.prefecture : null}</h2>
+        {data
+          ? data.regions.map((regionData, index) => (
+              <div key={index} className={styles.regionContainer}>
+                <h3>{regionData.region}</h3>
+                <div className={styles.regionDetailBox}>
+                  <div className={styles.regionWeather}>
+                    <img
+                      src={`https://www.jma.go.jp/bosai/forecast/img/${regionData.weather.image_code}`}
+                      alt="icon"
+                    />
+                    <p>{regionData.weather.weather}</p>
+                  </div>
+                  <Link
+                    to={`/detail`} // 福岡地方で外部APIを走らせてデータ取得 DBにはデータ入れない
+                    style={{ display: "inline-block", marginRight: "1rem" }}
+                  >
+                    <button>詳細を見る</button>
+                  </Link>
+                </div>
+              </div>
+            ))
+          : null}
+      </div>
+    </div>
+  );
+};
+
+export default Result;
