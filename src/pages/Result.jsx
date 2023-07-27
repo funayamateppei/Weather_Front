@@ -4,7 +4,7 @@ import defaultAxios from "../lib/axios";
 import { useSearchParams } from "react-router-dom";
 import useSWR from "swr";
 import { Link } from "react-router-dom";
-
+import LocationBackButton from "../components/LocationBackButton";
 import SVGButton from "../components/SVGButton";
 
 const Result = () => {
@@ -23,14 +23,7 @@ const Result = () => {
 
   return (
     <div className={styles.container}>
-      <Link to={`/`}>
-        <div className={styles.backButton}>
-          <SVGButton
-            width={"3rem"}
-            d={"M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"}
-          />
-        </div>
-      </Link>
+      <LocationBackButton route={"/"} />
 
       <div className={styles.weatherContainer}>
         <h2>{data ? data.prefecture : null}</h2>
@@ -47,7 +40,7 @@ const Result = () => {
                     <p>{regionData.weather.weather}</p>
                   </div>
                   <Link
-                    to={`/detail`} // 福岡地方で外部APIを走らせてデータ取得 DBにはデータ入れない
+                    to={`/detail?prefecture_code=${prefecture_code}&region=${regionData.region}`} // 福岡地方で外部APIを走らせてデータ取得 DBにはデータ入れない
                     style={{ display: "inline-block", marginRight: "1rem" }}
                   >
                     <button>詳細を見る</button>

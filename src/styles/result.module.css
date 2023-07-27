@@ -3,15 +3,6 @@
   justify-content: center;
 }
 
-.backButton {
-  padding: 0.5rem 0;
-  height: 3rem;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .weatherContainer {
   margin-top: 4rem;
   width: 90%;
@@ -24,9 +15,6 @@
   border-top: 1px solid gray;
   width: 100%;
   margin-bottom: 1rem;
-}
-.regionContainer h3 {
-  
 }
 
 .regionDetailBox {
