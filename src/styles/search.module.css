@@ -7,6 +7,14 @@
   width: 100vw;
 }
 
+.mainContainer {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .backButton {
   width: 100vw;
   height: 4rem;
@@ -85,4 +93,8 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gray;
+}
+
+.currentLocationWeatherContainer {
+  height: 40vh;
 }

@@ -12,7 +12,6 @@ const Search = () => {
   const [isOpenFirstCategory, setIsOpenFirstCategory] = useState(false);
   const [isOpenSecondCategory, setIsOpenSecondCategory] = useState(false);
 
-  // const url = "https://www.jma.go.jp/bosai/forecast/data/forecast/400000.json";
   const url = "prefectures";
   const fetcher = async (url) => {
     return await defaultAxios.get(url).then((response) => response.data);
@@ -60,10 +59,11 @@ const Search = () => {
 
   return (
     <div className={styles.container}>
-      <h1>WeatherWise</h1>
-      <p>地域を選択してください</p>
-      <button onClick={firstCategoryOpen}>都道府県名</button>
-
+      <div className={styles.mainContainer}>
+        <h1>WeatherWise</h1>
+        <p>地域を選択してください</p>
+        <button onClick={firstCategoryOpen}>都道府県名</button>
+      </div>
       {/* ファーストカテゴリー */}
       <div
         className={
@@ -93,7 +93,7 @@ const Search = () => {
           </div>
         </div>
       </div>
-
+      
       {/* セカンドカテゴリー */}
       <div
         className={
