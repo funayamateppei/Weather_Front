@@ -44,12 +44,11 @@ const Search = () => {
   };
 
   const secondCategoryOpen = (e) => {
-    setIsOpenSecondCategory(true);
     const filteredSecondCategories = data.filter(
       (data) => data.group === e.target.value
     );
     setSecondCategories(filteredSecondCategories);
-    console.log(secondCategories);
+    setIsOpenSecondCategory(true);
   };
   const secondCategoryClose = () => {
     setIsOpenSecondCategory(false);
