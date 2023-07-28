@@ -5,7 +5,6 @@ import { useSearchParams } from "react-router-dom";
 import useSWR from "swr";
 import { Link } from "react-router-dom";
 import LocationBackButton from "../components/LocationBackButton";
-import SVGButton from "../components/SVGButton";
 
 const Result = () => {
   const [searchParams] = useSearchParams();
