@@ -84,14 +84,16 @@ const Detail = () => {
                 </div>
 
                 {/* 風 */}
-                <div className={styles.windBox}>
-                  <div className={styles.tableRow}>風</div>
-                  {data.Detail.waves.slice(0, 2).map((wave, index) => (
-                    <div className={styles.wind} key={index}>
-                      {wave}
-                    </div>
-                  ))}
-                </div>
+                {data.Detail.waves ? (
+                  <div className={styles.windBox}>
+                    <div className={styles.tableRow}>風</div>
+                    {data.Detail.waves.slice(0, 2).map((wave, index) => (
+                      <div className={styles.wind} key={index}>
+                        {wave}
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
 
                 {/* 波 */}
                 <div className={styles.waveBox}>
