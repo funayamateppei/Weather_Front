@@ -75,7 +75,7 @@ const Search = () => {
         <div className={styles.categoryHeader}>
           <div className={styles.backButton} onClick={firstCategoryClose}>
             <SVGButton
-              width={"4rem"}
+              width={"3rem"}
               d={"M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"}
             />
           </div>
@@ -93,7 +93,7 @@ const Search = () => {
           </div>
         </div>
       </div>
-      
+
       {/* セカンドカテゴリー */}
       <div
         className={
@@ -105,7 +105,7 @@ const Search = () => {
         <div className={styles.categoryHeader}>
           <div className={styles.backButton} onClick={secondCategoryClose}>
             <SVGButton
-              width={"4rem"}
+              width={"3rem"}
               d={"M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"}
             />
           </div>

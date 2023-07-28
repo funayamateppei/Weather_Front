@@ -16,8 +16,11 @@
 }
 
 .backButton {
+  display: flex;
+  align-items: center;
   width: 100vw;
   height: 4rem;
+  color: gray;
 }
 
 /* カテゴリ表示アニメーションの定義 */
