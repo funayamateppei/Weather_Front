@@ -21,12 +21,19 @@ const Result = () => {
   }, []);
   // console.log(data);
 
+  const currentDate = new Date();
+  const month = currentDate.getMonth() + 1;
+  const date = currentDate.getDate();
+  const day = currentDate.getDay();
+  const weekday = ["日", "月", "火", "水", "木", "金", "土"];
+
   return (
     <div className={styles.container}>
       <LocationBackButton route={"/"} />
 
       <div className={styles.weatherContainer}>
         <h2>{data ? data.prefecture : null}</h2>
+        <p>{`本日${month}月${date}日(${weekday[day]})`}</p>
         {data
           ? data.regions.map((regionData, index) => (
               <div key={index} className={styles.regionContainer}>

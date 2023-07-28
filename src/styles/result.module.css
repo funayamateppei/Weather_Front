@@ -8,7 +8,8 @@
   width: 90%;
 }
 .weatherContainer h2 {
-  padding-left: 1rem;
+  padding-left: .3rem;
+  margin: 0;
 }
 
 .regionContainer {

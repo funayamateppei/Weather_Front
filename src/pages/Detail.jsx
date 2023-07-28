@@ -37,7 +37,7 @@ const Detail = () => {
         <div className={styles.weatherDetailContainer}>
           {data ? (
             <>
-              <h3>{data.Detail.area.name}</h3>
+              <h2>{data.Detail.area.name}</h2>
             </>
           ) : (
             <div className={styles.loadingText}>
@@ -49,7 +49,7 @@ const Detail = () => {
         <div className={styles.weekWeather}>
           {data ? (
             <>
-              <h3>{`${data.Week[0].area.name}の天気予報`}</h3>
+              <h2>{`${data.Week[0].area.name}の天気予報`}</h2>
               <p>{`本日${month}月${date}日(${weekday[day]})`}</p>
               <div className={styles.weekWeatherContainer}>
                 <WeekWeatherBox
