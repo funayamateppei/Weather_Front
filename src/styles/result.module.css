@@ -4,11 +4,11 @@
 }
 
 .weatherContainer {
-  margin-top: 4rem;
+  margin-top: 5rem;
   width: 90%;
 }
 .weatherContainer h2 {
-  padding-left: .3rem;
+  padding-left: 0.3rem;
   margin: 0;
 }
 

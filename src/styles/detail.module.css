@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,8 +11,119 @@
   width: 90%;
 }
 
+.detailContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.tableRow {
+  min-height: 50px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.dateBox {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  min-height: 50px;
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.weatherContainer {
+  display: flex;
+  align-items: center;
+}
+
+.weatherBox {
+  min-height: 100px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.weatherTableRow {
+  min-height: 100px;
+}
+
+.windBox {
+  display: flex;
+  align-items: center;
+}
+
+.wind {
+  min-height: 50px;
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.waveBox {
+  display: flex;
+  align-items: center;
+}
+
+.wave {
+  min-height: 50px;
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.popsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.popsBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.pops {
+  display: flex;
+}
+
+.pops div {
+  min-height: 30px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.popsTableRow {
+  min-height: 60px;
+}
+
 .weekWeather {
   width: 90%;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }
