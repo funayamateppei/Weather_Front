@@ -1,0 +1,28 @@
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weatherContainer div {
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateBox {
+  height: 30px;
+  width: 100px;
+}
+
+.weatherBox {
+  height: 90px;
+  width: 100px;
+}
+
+.popBox {
+  height: 30px;
+  width: 100px;
+}

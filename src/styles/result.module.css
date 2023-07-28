@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.weatherContainer {
+  margin-top: 5rem;
+  width: 90%;
+}
+.weatherContainer h2 {
+  padding-left: 0.3rem;
+  margin: 0;
+}
+
+.regionContainer {
+  border-top: 1px solid gray;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.regionDetailBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regionWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
