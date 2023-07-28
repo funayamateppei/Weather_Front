@@ -61,8 +61,8 @@ const Search = () => {
     <div className={styles.container}>
       <div className={styles.mainContainer}>
         <h1>WeatherWise</h1>
-        <p>地域を選択してください</p>
-        <button onClick={firstCategoryOpen}>都道府県名</button>
+        <p>天気情報を知りたい地域を選択してください</p>
+        <button onClick={firstCategoryOpen}>地域を選択</button>
       </div>
       {/* ファーストカテゴリー */}
       <div
