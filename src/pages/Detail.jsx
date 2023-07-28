@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/detail.module.css";
 import { useSearchParams } from "react-router-dom";
 import defaultAxios from "../lib/axios";

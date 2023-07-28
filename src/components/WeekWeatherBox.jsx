@@ -9,7 +9,7 @@ const WeekWeatherBox = ({ day, pop, weather, children }) => {
         {weather}
         {children}
       </div>
-      <div className={styles.popBox}>{pop == " %" ? "- %" : pop}</div>
+      <div className={styles.popBox}>{pop === " %" ? "- %" : pop}</div>
     </div>
   );
 };
