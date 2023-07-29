@@ -86,7 +86,11 @@ const Detail = () => {
                 {/* 風 */}
                 {data.Detail.waves ? (
                   <div className={styles.windBox}>
-                    <div className={styles.tableRow}>風</div>
+                    <div
+                      className={`${styles.tableRow} ${styles.waveTableRow}`}
+                    >
+                      風
+                    </div>
                     {data.Detail.waves.slice(0, 2).map((wave, index) => (
                       <div className={styles.wind} key={index}>
                         {wave}
@@ -97,7 +101,9 @@ const Detail = () => {
 
                 {/* 波 */}
                 <div className={styles.waveBox}>
-                  <div className={styles.tableRow}>波</div>
+                  <div className={`${styles.tableRow} ${styles.waveTableRow}`}>
+                    波
+                  </div>
                   {data.Detail.winds.slice(0, 2).map((wind, index) => (
                     <div className={styles.wave} key={index}>
                       {wind}
