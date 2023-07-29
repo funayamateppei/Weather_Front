@@ -20,6 +20,7 @@ const Search = () => {
   useEffect(() => {
     mutate();
   }, []);
+  console.log(data);
 
   const firstCategories = [
     "北海道",
