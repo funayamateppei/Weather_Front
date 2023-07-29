@@ -20,9 +20,9 @@ const Search = () => {
   useEffect(() => {
     mutate();
   }, []);
-  const apiurl = `${process.env.REACT_APP_BACKEND_URL}`
-  console.log(data);
-  console.log(apiurl);
+  // const apiurl = `${process.env.REACT_APP_BACKEND_URL}`
+  // console.log(data);
+  // console.log(apiurl);
 
 
   const firstCategories = [
