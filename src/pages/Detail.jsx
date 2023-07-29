@@ -19,7 +19,7 @@ const Detail = () => {
   useEffect(() => {
     mutate();
   }, []);
-  console.log(data);
+  // console.log(data)
 
   const currentDate = new Date();
   const month = currentDate.getMonth() + 1;
