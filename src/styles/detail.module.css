@@ -63,13 +63,17 @@
   min-height: 100px;
 }
 
+.windTableRow {
+  min-height: 100px;
+}
+
 .windBox {
   display: flex;
   align-items: center;
 }
 
 .wind {
-  min-height: 50px;
+  min-height: 100px;
   min-width: 240px;
   display: flex;
   justify-content: center;
@@ -78,13 +82,17 @@
   box-sizing: border-box;
 }
 
+.waveTableRow {
+  min-height: 100px;
+}
+
 .waveBox {
   display: flex;
   align-items: center;
 }
 
 .wave {
-  min-height: 50px;
+  min-height: 100px;
   min-width: 240px;
   display: flex;
   justify-content: center;
@@ -123,7 +131,7 @@
 
 .weekWeather {
   width: 90%;
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
