@@ -17,7 +17,7 @@ const Result = () => {
   const { data, mutate } = useSWR(url, fetcher);
   useEffect(() => {
     mutate();
-  }, []);
+  }, [mutate]);
   // console.log(data);
 
   const currentDate = new Date();

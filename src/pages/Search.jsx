@@ -19,7 +19,7 @@ const Search = () => {
   const { data, mutate } = useSWR(url, fetcher);
   useEffect(() => {
     mutate();
-  }, []);
+  }, [mutate]);
   // const apiurl = `${process.env.REACT_APP_BACKEND_URL}`
   // console.log(data);
   // console.log(apiurl);
